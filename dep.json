@@ -1,0 +1,31 @@
+{
+  "version" : 0,
+  "repos" : [ {
+    "type" : "git",
+    "uri" : "https://github.com/taibytedx/testdep.git",
+    "name" : "rep1",
+    "author" : "DepAuthor",
+    "email" : "DepEmail",
+    "auth" : {
+      "type" : "pass",
+      "password" : {
+        "type" : "Encrypted",
+        "value" : {
+          "keyId" : "ta/Gr9+OsGMAWL252kHyoA==",
+          "iv" : "GhDiSFeXAuXFheVOQh0GhA==",
+          "ciphertext" : "3ot2fVaE7p2VWCk3P/kZHESJShIEI6xkXud15BSHvq63xUT/4luX5C6wx1TBFwG/"
+        }
+      },
+      "username" : "DepUser"
+    }
+  } ],
+  "fragments" : [ {
+    "details" : {
+      "type" : "git",
+      "deployFile" : "intelligencehub-deployment.json",
+      "repoName" : "rep1",
+      "ref" : "branch430"
+    },
+    "keyPaths" : [ ]
+  } ]
+}
