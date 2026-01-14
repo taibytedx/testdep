@@ -94,6 +94,37 @@
           "value" : "sqlpass"
         }
       }
+    }, {
+      "name" : "sql_pw",
+      "uri" : "jdbc.sqlserver://52.10.6.4:1433",
+      "tags" : [ "starter_solution" ],
+      "writes" : {
+        "flattenModeledValues" : false
+      },
+      "subscriptions" : { },
+      "storeForward" : {
+        "enabled" : false,
+        "maxEntries" : 100,
+        "waitOnFailureInterval" : {
+          "duration" : 1,
+          "units" : "Seconds"
+        }
+      },
+      "settings" : {
+        "database" : "serviceinfo",
+        "username" : "highbyte",
+        "strategy" : {
+          "type" : "default"
+        },
+        "password" : {
+          "type" : "Encrypted",
+          "value" : {
+            "keyId" : "ta/Gr9+OsGMAWL252kHyoA==",
+            "iv" : "/jMuszaY81PPIzwMiB1scQ==",
+            "ciphertext" : "/+ubSiekiUNCarB3Oibs/g=="
+          }
+        }
+      }
     } ],
     "conditions" : [ ],
     "inputs" : [ {
@@ -204,6 +235,23 @@
           "indexName" : "",
           "indexValue" : ""
         }
+      },
+      "cacheLifetime" : {
+        "enabled" : false
+      },
+      "template" : {
+        "type" : "Off"
+      },
+      "parameters" : {
+        "type" : "EmptyParameters"
+      }
+    }, {
+      "name" : "read",
+      "connection" : "sql_pw",
+      "type" : "jdbc.sqlserver",
+      "qualifier" : {
+        "type" : "query",
+        "query" : "select * from [dbo].[lastservice]"
       },
       "cacheLifetime" : {
         "enabled" : false
