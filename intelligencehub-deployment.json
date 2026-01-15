@@ -542,7 +542,15 @@
     "hubs" : [ ]
   },
   "accessControl" : {
-    "apiKeys" : [ ],
+    "apiKeys" : [ {
+      "description" : "api desc",
+      "friendlyName" : "rest",
+      "expiration" : 1800057599000,
+      "version" : 1,
+      "algorithm" : "SHA-256",
+      "user" : "RestUser",
+      "hash" : "Nqkfg5DPqoKygP+8tsxkAXY7ebfX7Q860stpNHS6Fs4="
+    } ],
     "version" : 0,
     "roles" : [ {
       "name" : "admin",
@@ -563,6 +571,15 @@
       } ]
     } ],
     "users" : [ {
+      "name" : "RestUser",
+      "credentials" : {
+        "salt" : "MnHrA3t6gy5TfbAbGCNRFA==",
+        "hashedPassword" : "UXFKIF5CP+n5C8KVppbg02Y1qv6bAtyRcsSYVA+28+uCy1xEnySUe1zaCX3P91Q2QIw9Bm4Ao/QIaSmQP7VnXQ=="
+      },
+      "policyVersion" : 1,
+      "roles" : [ "admin" ],
+      "claims" : [ ]
+    }, {
       "name" : "administrator",
       "credentials" : {
         "salt" : "ktXiG/rbm1yWHxKlLCqyhg==",
